@@ -1,0 +1,26 @@
+(Peut etre faire format word avec screenshots)
+Go to the file where the project is : 
+cd "project file"
+
+Get modifications made by others : 
+git pull origin master
+
+1) Add modifications
+Add all modifications : 
+git commit .
+
+Add a specific modification:
+git commit "file/folder"
+
+2) Commit modifications (Comments always in English so we can understand each other)
+git commit -m "Comment your modification"
+For example : 
+git commit -m "index.php modifications"
+
+3)Push your modifications 
+git push
+
+If you forget to get all modifications and you want to push your modifications, you have to checkout your file :
+1)Copy your modification in a text editor
+2)git checkout. The modification you made will be erased. So get your modifications you pasted in the text editor and the conflict will 
+be resolved.
