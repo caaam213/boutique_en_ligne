@@ -9,6 +9,14 @@
 ?>
 
 <?php
+    if(isset($_COOKIE['username']))
+    {
+        header('Location: index.php?action=admin_manager');
+    }
+
+?>
+
+<?php
 
     if(isset($_POST['submit']))
     {
@@ -26,14 +34,11 @@
         
         if(array_key_exists($username, $connectionList))
         {
-            print_r($connectionList);
-            echo $password;
-            
             if(sha1($password) == $connectionList[$username])
             {
                 
                 $_SESSION['username'] = $username;
-                $_SESSION['customer_id'] = $loginModel->getCustomerIdByUsername($username);
+                $_SESSION['customer_id'] = $loginModel->getCustomerIdByUsername($username)->get_customer_id();
                 setcookie('username',$_SESSION['username'],time()+3600);
                 setcookie('customer_id',$_SESSION['customer_id'],time()+3600);
                 header('Location:index.php?action=home');

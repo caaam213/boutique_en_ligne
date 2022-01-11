@@ -18,9 +18,18 @@
     //Subfolders : 
 
     //Styles
-    define('STYLES_PATH',RESOURCES_PATH.'styles/');
+    define('STYLES_PATH',RESOURCES_PATH.'styles/s_');
 
-    //Images
+    //Images Products
     define('PRODUCT_IMAGES',RESOURCES_PATH.'productimages/');
+
+    //Other images
+    define('OTHER_IMAGES',RESOURCES_PATH.'otherImages/');
+
+    //pdf
+    define('PDF',RESOURCES_PATH.'fpdf/');
+
+    //Javascript
+    define('JS_PATH',RESOURCES_PATH.'js/');
 
 ?>

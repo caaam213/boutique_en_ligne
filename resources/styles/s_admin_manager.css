@@ -1,0 +1,28 @@
+.btn-danger {
+    background-color: #850606;
+    border: 1px solid #850606;
+}
+
+.btn-dark {
+    background-color: #5a5e6b;
+    border: 1px solid #5a5e6b;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 10px;
+    }
+    .btn {
+        font-size: 10px;
+    }
+}
+
+.details {
+    background-color: #787878;
+    border: 1px solid #787878;
+}
+
+.payment {
+    background-color: #18391e;
+    border: 1px solid #18391e;
+}

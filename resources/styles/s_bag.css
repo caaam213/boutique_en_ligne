@@ -1,0 +1,17 @@
+.btn-danger {
+    background-color: #850606;
+    border: 1px solid #850606;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 10px;
+    }
+    .btn {
+        font-size: 10px;
+    }
+}
+
+.bttn_success {
+    font-size: 10px;
+}

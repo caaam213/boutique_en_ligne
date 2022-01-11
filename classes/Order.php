@@ -7,8 +7,11 @@ class Order
     private $_delivery_add_id;
     private $_payment_type;
     private $_date;
+    private $_status;
+    private $_session;
+    private $_total;
 
-    public function __construct($id,$customer_id,$registered,$delivery_add_id,$payment_type,$date)
+    public function __construct($id,$customer_id,$registered,$delivery_add_id,$payment_type,$date,$status,$session, $total)
     {
         $this->_id = $id;
         $this->_customer_id = $customer_id;
@@ -16,6 +19,9 @@ class Order
         $this->_delivery_add_id = $delivery_add_id;
         $this->_payment_type = $payment_type;
         $this->_date = $date;
+        $this->_status = $status;
+        $this->_session = $session;
+        $this->_total = $total;
     }
 
     /**
@@ -89,6 +95,22 @@ class Order
     {
         return $this->_date;
     }
+
+    public function get_status()
+    {
+        return $this->_status;
+    }
+
+    public function get_session()
+    {
+        return $this->_session;
+    }
+
+    public function get_total()
+    {
+        return $this->_total;
+    }
+
 }
 
 

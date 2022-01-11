@@ -35,9 +35,21 @@
 
         public function getCustomerIdByUsername($username)
         {
-            $query = "SELECT customer_id FROM logins where username=?";
-            $customer_id = $this->queryRow($query,array($username));
-            return $customer_id;
+            $query = "SELECT * FROM logins where username=?";
+            $result = $this->queryRow($query,array($username));
+            $login = new Login($result['id'],$result['customer_id'],
+                $result['username'],$result['password']);
+            return $login;
+        }
+
+        public function addLogin($customer_id, $username, $password)
+        {
+            $query = "INSERT INTO LOGINS(customer_id, username, password) 
+            VALUES (:customer_id,:username,:password)";
+            $insertLogin = $this->queryRow($query,[
+                'customer_id' => $customer_id,
+                'username' => $username,
+                'password' => $password,]);
         }
 
 

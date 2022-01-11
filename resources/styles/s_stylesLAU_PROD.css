@@ -1,0 +1,54 @@
+/*univerdal style for cards*/
+
+body {
+    background: lightgrey;
+}
+
+.container {
+    margin-top: 110px !important;
+}
+
+.card {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    transition: tramform .3s;
+}
+
+.text1 {
+    font-size: 13 px;
+    color: #cbcbcb;
+}
+
+.info {
+    line-height: 17px;
+}
+
+.star {
+    color: #fbc02d;
+}
+
+.cost span {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product {
+    background: #dc3545;
+}
+
+.product:hover {
+    opacity: .8;
+}
+
+.cursor {
+    cursor: pointer;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

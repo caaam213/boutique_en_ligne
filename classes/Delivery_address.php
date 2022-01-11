@@ -1,5 +1,5 @@
 <?php
-class Customer
+class Delivery_address
 {
     private $_id;
     private $_firstname;

@@ -31,6 +31,14 @@
             }
             return $categoriesList;
         }
+
+        public function getCategoryById($id)
+        {
+            $query = "SELECT * FROM `categories` WHERE id=?";
+            $result = $this->queryRow($query,[$id]);
+            $category = new Category($result['id'],$result['name']);
+            return $category;
+        }
     }
 
 

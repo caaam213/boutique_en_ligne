@@ -37,6 +37,8 @@
             return $productsList;
         }
 
+
+
         public function getAllProducts()
         {
             $productsList = [];
@@ -59,7 +61,7 @@
         public function getProductsById($id)
         {
             $query = "SELECT * FROM products WHERE id = ?";
-            $product = $this->queryRow($query,$id);
+            $product = $this->queryRow($query,[$id]);
             $product = new Product($product['id'],
                 $product['cat_id'],
                 $product['name'],
@@ -68,6 +70,19 @@
                 $product['price'],
                 $product['quantity']);
             return $product;
+        }
+
+        public function updateProduct($id,$cat_id,$name,$description,$image,$price,$quantity)
+        {
+            $query = "UPDATE `products` SET `cat_id`=?,`name`=?,`description`=?,`image`=?,`price`=?,`quantity`=? WHERE id=?";
+            $updateProduct = $this->queryRow($query,[
+                $cat_id,
+                $name,
+                $description,
+                $image,
+                $price,
+                $quantity,
+                $id]);
         }
     }
 ?>
