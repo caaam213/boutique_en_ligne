@@ -1,0 +1,1 @@
+Pour que le site fonctionne, il faut utiliser la base de donnée incluse dans ce dossier.
